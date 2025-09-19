@@ -1,0 +1,50 @@
+{% extends 'etudiant/base.html' %}
+{% block content %}
+<Div style="margin-bottom:56 px;">
+    <h1 style="margin-left:350px ;color: darkgreen;"> CHAMBRE</h1>
+</Div>
+
+
+
+ <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Numero Type Chambre</th>
+      <th scope="col">Etage</th>
+      <th scope="col"> Nom de Chambre</th>
+       <th scope="col"> etat de chambre</th>
+       <th scope="col"> Les Habitants </th>
+      
+     
+    </tr>
+  </thead>
+  <tbody>
+    {% for Chambre in chamb %}
+    <tr>
+      <th scope="row">{{Chambre.id}}</th>
+      <td>{{ Chambre.numTypeChambre }}</td>
+      <td>{{ Chambre.etage }}</td>
+      <td>{{ Chambre.nomChambre }}</td>
+      <td>{{ Chambre.nommbre_de_personne }}</td>
+      
+      {% if Chambre.nommbre_de_personne == 2 %}
+      <td><h5 class="text-red-100">Chambre pleine</h5></td>
+      {% else %}
+      <td><a href="{% url 'liste_habiter' Chambre.id %}">voir les personnes</a></td>
+      {% endif %}
+    
+      
+      
+      
+       
+    </tr>
+{% empty %}
+<H1>PAS D ELEVE ENCORE</H1>
+{% endfor %}
+    
+  </tbody>
+</table>
+
+
+{% endblock content %}

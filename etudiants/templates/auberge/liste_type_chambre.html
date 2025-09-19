@@ -1,0 +1,40 @@
+{% extends 'etudiant/base.html' %}
+{% block content %}
+<Div style="margin-bottom:56 px;">
+    <h1 style="margin-left:350px ;color: darkgreen;">TYPE DE CHAMBRE</h1>
+</Div>
+
+
+
+ <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+    
+      <th scope="col"> Type de Chambre</th>
+      <th scope="col"> Chambre</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    {% for TypeChambre in type %}
+    <tr>
+      <th scope="row">{{TypeChambre.numTypeChambre}}</th>
+
+      <td>{{ TypeChambre.TYPE }}</td>
+      <td><a  href="{% url 'liste_chamb' TypeChambre.numTypeChambre %}">voir les chambres</a></td>
+    
+      
+      
+      
+       
+    </tr>
+{% empty %}
+<H1>PAS D ELEVE ENCORE</H1>
+{% endfor %}
+    
+  </tbody>
+</table>
+
+
+{% endblock content %}

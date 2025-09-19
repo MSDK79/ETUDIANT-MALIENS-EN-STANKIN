@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="% static 'etudiant/css/bootstrap.css'%">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container">
+           <img  src="{% static 'etudiant/images/image5.JPG'%}" width="60" height="40" >
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                      <div>
+  
+   </div>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home'%}">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'liste_etudiant' %}">Étudiants</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'list_aub' %}">Auberge</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Informations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact'%}">Contact</a></li>
+                    
+                </ul>
+                <img  src="{% static 'etudiant/images/image1.JPEG'%}" width="50" height="35" >
+              
+            </div>
+          
+        </div>
+    </nav>
+
+</head>
+<body>
+
+    <div class="container mt-5">
+        
+        
+         
+        {% block content%} 
+        {% endblock content%}
+    </div>
+    <script src="{% static 'etudiant/js/jquery.js' %}"></script>
+    <script src="{% static 'etudiant/js/bootstrap.js' %}"></script>
+    <script src="{% static 'etudiant/js/popper.js' %}"></script>
+     
+</body>
+ <footer class="bg-primary text-white text-center py-3 mt-5">
+        <p class="mb-0">© 2025 Auberge Étudiants - Tous droits réservés</p>
+    </footer>
+
+</html>

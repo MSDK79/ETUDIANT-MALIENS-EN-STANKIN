@@ -1,0 +1,46 @@
+{% extends 'etudiant/base.html' %}
+{% block content %}
+<Div style="margin-bottom:56 px;">
+    <h1 style="margin-left:350px ;color: darkgreen;"> Habiter</h1>
+</Div>
+
+
+
+ <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col"> Etudiant</th>
+      <th scope="col">  Chambre</th>
+     <th scope="col">etat Chambre</th>
+  
+      
+     
+    </tr>
+  </thead>
+  <tbody>
+    {% for Habiter in habite %}
+    <tr>
+      <th scope="row">{{Habiter.numHabiter}}</th>
+      <td>{{ Habiter.numEtudiant }}</td>
+      <td>{{ Habiter.numChambre }}</td>
+       <td>{{ Habiter.nom}}</td>
+       <td>{{ Habiter.nombre}}</td>
+      
+      
+      
+    
+      
+      
+      
+       
+    </tr>
+{% empty %}
+<H1>PAS D ELEVE ENCORE</H1>
+{% endfor %}
+    
+  </tbody>
+</table>
+
+
+{% endblock content %}

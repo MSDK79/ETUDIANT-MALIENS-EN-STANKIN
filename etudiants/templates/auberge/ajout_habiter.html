@@ -1,0 +1,10 @@
+{% extends 'etudiant/base.html' %}
+{% block content %}
+
+<h1>ajouter Habiter</h1>
+<form method='POST'>
+     {% csrf_token %} 
+    {{form}}
+    <button type="submit">create</button>
+</form>
+{% endblock content %}

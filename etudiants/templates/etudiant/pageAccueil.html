@@ -1,0 +1,60 @@
+{% extends 'etudiant/base.html' %}
+{% block content %}
+ {% load static %}
+<img  src="{% static 'etudiant/images/image4.JPG'%}" width="300" height="300"  >
+
+ <img  src="{% static 'etudiant/images/image6.JPG'%}" width="300" height="300">
+
+
+    <!-- Section principale -->
+    <header class="bg-white text-center py-5 shadow-sm">
+      
+        <div class="container">
+            <h1 class="display-4 fw-bold text-primary">Bienvenue à l’Auberge des Étudiants Maliens Residant en СТАНКИН</h1>
+            <p class="lead text-muted">Une gestion simple et efficace des étudiants, chambres et paiement des bourses.</p>
+            <div class="mt-4">
+                <a href="{% url 'ajouter_un_etudiant' %}" class="btn btn-success btn-lg me-2">➕ Ajouter un étudiant</a>
+                <a href="{% url 'list_aub' %}" class="btn btn-outline-primary btn-lg">📋 Voir les auberges</a>
+            </div>
+        </div>
+    </header>
+   
+    <!-- Cartes de fonctionnalités -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="card shadow border-0 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">👨‍🎓 Gestion des étudiants</h5>
+                            <p class="card-text text-muted">Ajoutez, modifiez et supprimez les informations des étudiants facilement.</p>
+                            <a href="{% url 'affiche' %}" class="btn btn-primary">Accéder</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow border-0 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">🛏 Gestion des chambres</h5>
+                            <p class="card-text text-muted">Attribuez des chambres et suivez leur disponibilité en temps réel.</p>
+                            <a href="{% url 'list_type_chambre' %}" class="btn btn-primary">Accéder</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow border-0 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">💳 Gestion des bourse</h5>
+                            <p class="card-text text-muted">Enregistrez et contrôlez les paiements des étudiants de manière claire.</p>
+                            <a href="#" class="btn btn-primary">Accéder</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button onclick="saluer()">afficher ce message</button>
+  <script src="{% static 'etudiant/js/scripts.js' %}"></script>
+    <!-- Footer -->
+
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends 'etudiant/base.html' %}
+{% block content %}
+
+            <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nom Etage</th>
+      <th scope="col">Numero auberge</th>
+      
+       
+        
+    </tr>
+  </thead>
+  <tbody>
+    {% for Etage in etag %}
+    <tr>
+      <th scope="row">{{Etage.id}}</th>
+      <td>{{Etage.nomEtage}}</td>
+      <td>{{Etage.numAuberge}}</td>
+      
+      
+      
+      
+       
+    </tr>
+{% empty %}
+<H1>PAS D ELEVE ENCORE</H1>
+{% endfor %}
+    
+  </tbody>
+</table>
+
+
+
+{% endblock content %}

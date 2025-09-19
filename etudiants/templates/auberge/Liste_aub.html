@@ -1,0 +1,39 @@
+{% extends 'etudiant/base.html' %}
+{% block content %}
+<Div style="margin-bottom:56 px;">
+    <h1 style="margin-left:350px ;color: darkgreen;">LISTE D'AUBERGE</h1>
+</Div>
+
+
+
+ <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nom auberge</th>
+      <th scope="col">Adresse auberge</th>
+        <th scope="col">Description Auberge</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for Auberge in aub %}
+    <tr>
+      <th scope="row">{{Auberge.id}}</th>
+      <td>{{ Auberge.nomAuberge }}</td>
+      <td>{{ Auberge.adresseAuberge }}</td>
+      <td>{{ Auberge.description }}</td>
+      <td><a href="{% url 'les_etages_aub' Auberge.id %}">voir les etages</a></td>
+      
+      
+      
+       
+    </tr>
+{% empty %}
+<H1>PAS D ELEVE ENCORE</H1>
+{% endfor %}
+    
+  </tbody>
+</table>
+
+
+{% endblock content %}

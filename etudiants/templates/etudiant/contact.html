@@ -1,0 +1,47 @@
+{% extends 'etudiant/base.html' %}
+{% block content %}
+ {% load static %}
+
+<h1>Mes Contacts</h1>
+<table>
+    <tr>
+        <td>
+            <div style="font-size: 30px; color: darkgreen;">Telephone :</div>
+        </td>
+        <td>
+            <div style="font-size: 30px;">+223 79573204</div>
+        </td>
+        
+    </tr>
+    <tr>
+        <td>
+            
+            <div style="font-size: 30px; color: darkgreen;">Email :</div>
+    
+        </td>
+        <td>    
+       <div style="font-size: 30px;">dsk7957@gmail.com</div>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <div style="font-size: 30px; color: darkgreen;">Groupe Whatsapp :</div>
+        </td>
+        <td><div>
+    <a href="http://wa.me/22379573204"><img  src="{% static 'etudiant/images/image7.PNG'%}" style="height: auto;"; width="120"></a>
+</div></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <div style="font-size: 30px; color: darkgreen;">Groupe Telegramme : </div>
+        </td>
+        <td><div>
+    <a href="https://t.me/hostelvadkovskii"><img  src="{% static 'etudiant/images/image8.PNG'%}" style="height: auto;"; width="40"></a>
+</div></td>
+    </tr>
+</table>
+{% endblock content %}
